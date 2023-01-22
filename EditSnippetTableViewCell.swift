@@ -19,17 +19,6 @@ class EditSnippetTableViewCell: UITableViewCell, UITextFieldDelegate {
     
     var onTextFieldReturn: (() -> Void)?
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         if let handler = onTextFieldReturn {handler()}
@@ -37,7 +26,7 @@ class EditSnippetTableViewCell: UITableViewCell, UITextFieldDelegate {
         return false
     }
     
-    func update(with snippet: PodcastSnippet, onTextFieldReturn: @escaping () -> Void) {
+    func update(with snippet: PodcastSnippet, image: UIImageView? = nil, onTextFieldReturn: @escaping () -> Void) {
         
         self.onTextFieldReturn = onTextFieldReturn
         
@@ -59,7 +48,12 @@ class EditSnippetTableViewCell: UITableViewCell, UITextFieldDelegate {
         let end = PodcastSnippet.convertToMinandSec(timeInSeconds: startTime + Int(duration))
 
         timestampLabel.text = "\(start)-\(end)"
-        myImage.image = snippet.episode.image
+        
+        if let image = image {
+            myImage = image
+        } else {
+            myImage.image = UIImage(named: "empty-image")
+        }
         
     }
 

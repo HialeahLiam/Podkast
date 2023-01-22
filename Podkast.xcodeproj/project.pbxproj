@@ -10,6 +10,8 @@
 		2B15F51C29629F70001FB481 /* SnippetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B15F51B29629F70001FB481 /* SnippetTableViewCell.swift */; };
 		2B15F51E29635383001FB481 /* EditSnippetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B15F51D29635383001FB481 /* EditSnippetTableViewCell.swift */; };
 		2B206F7F2975210200916906 /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B206F7E2975210200916906 /* SpotifyiOS.framework */; };
+		2B206F882977808C00916906 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B206F872977808C00916906 /* UIViewControllerExtension.swift */; };
+		2B206F8B2978674600916906 /* CaptureSnippetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B206F8A2978674600916906 /* CaptureSnippetView.swift */; };
 		2B352C8E2967E19900269F93 /* SpotifyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B352C8D2967E19900269F93 /* SpotifyUser.swift */; };
 		2B352C912967E78100269F93 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B352C902967E78100269F93 /* Data.swift */; };
 		2B352C932967EFA400269F93 /* RefreshToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B352C922967EFA400269F93 /* RefreshToken.swift */; };
@@ -24,6 +26,11 @@
 		2B47507D29577F3500B1E61C /* PodkastUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B47507C29577F3500B1E61C /* PodkastUITestsLaunchTests.swift */; };
 		2B8DFB56295E0DC70020B508 /* Spotify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8DFB55295E0DC70020B508 /* Spotify.swift */; };
 		2B8DFB58295E20120020B508 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8DFB57295E20120020B508 /* HomeViewController.swift */; };
+		2BA3887E297CD778003AE943 /* SnippetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA3887D297CD778003AE943 /* SnippetController.swift */; };
+		2BA38880297CE0CB003AE943 /* SnippetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA3887F297CE0CB003AE943 /* SnippetCell.swift */; };
+		2BA38889297CF964003AE943 /* FuseUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA38886297CF964003AE943 /* FuseUtilities.swift */; };
+		2BA3888A297CF964003AE943 /* Fuse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA38887297CF964003AE943 /* Fuse.swift */; };
+		2BA3888B297CF964003AE943 /* String+Fuse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA38888297CF964003AE943 /* String+Fuse.swift */; };
 		2BA5C510295FD5620089A4BB /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA5C50F295FD5620089A4BB /* Errors.swift */; };
 		2BA5C514296007AC0089A4BB /* PodcastSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA5C513296007AC0089A4BB /* PodcastSnippet.swift */; };
 		2BA5C516296008B10089A4BB /* Podcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA5C515296008B10089A4BB /* Podcast.swift */; };
@@ -31,7 +38,6 @@
 		2BA5C51A29600A7F0089A4BB /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA5C51929600A7F0089A4BB /* Image.swift */; };
 		2BA5C51E296012DA0089A4BB /* PlaybackTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA5C51D296012DA0089A4BB /* PlaybackTypes.swift */; };
 		2BC151FC29625035008BA93E /* LibraryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC151FB29625035008BA93E /* LibraryTableViewController.swift */; };
-		2BC151FF29626C8C008BA93E /* SnippetsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC151FE29626C8C008BA93E /* SnippetsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +62,8 @@
 		2B15F51D29635383001FB481 /* EditSnippetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSnippetTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		2B206F7E2975210200916906 /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyiOS.framework; sourceTree = "<group>"; };
 		2B206F802975227700916906 /* Podkast-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Podkast-Bridging-Header.h"; sourceTree = "<group>"; };
+		2B206F872977808C00916906 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		2B206F8A2978674600916906 /* CaptureSnippetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureSnippetView.swift; sourceTree = "<group>"; };
 		2B352C8D2967E19900269F93 /* SpotifyUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyUser.swift; sourceTree = "<group>"; };
 		2B352C902967E78100269F93 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		2B352C922967EFA400269F93 /* RefreshToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshToken.swift; sourceTree = SOURCE_ROOT; };
@@ -74,6 +82,11 @@
 		2B47507C29577F3500B1E61C /* PodkastUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodkastUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2B8DFB55295E0DC70020B508 /* Spotify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spotify.swift; sourceTree = "<group>"; };
 		2B8DFB57295E20120020B508 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Podkast/ViewControllers/HomeViewController.swift; sourceTree = SOURCE_ROOT; };
+		2BA3887D297CD778003AE943 /* SnippetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnippetController.swift; sourceTree = "<group>"; };
+		2BA3887F297CE0CB003AE943 /* SnippetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnippetCell.swift; sourceTree = "<group>"; };
+		2BA38886297CF964003AE943 /* FuseUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FuseUtilities.swift; sourceTree = "<group>"; };
+		2BA38887297CF964003AE943 /* Fuse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fuse.swift; sourceTree = "<group>"; };
+		2BA38888297CF964003AE943 /* String+Fuse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Fuse.swift"; sourceTree = "<group>"; };
 		2BA5C50F295FD5620089A4BB /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = SOURCE_ROOT; };
 		2BA5C513296007AC0089A4BB /* PodcastSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastSnippet.swift; sourceTree = "<group>"; };
 		2BA5C515296008B10089A4BB /* Podcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Podcast.swift; sourceTree = "<group>"; };
@@ -81,7 +94,6 @@
 		2BA5C51929600A7F0089A4BB /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		2BA5C51D296012DA0089A4BB /* PlaybackTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlaybackTypes.swift; path = Podkast/Models/PlaybackTypes.swift; sourceTree = SOURCE_ROOT; };
 		2BC151FB29625035008BA93E /* LibraryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LibraryTableViewController.swift; path = Podkast/LibraryTableViewController.swift; sourceTree = SOURCE_ROOT; };
-		2BC151FE29626C8C008BA93E /* SnippetsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnippetsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,10 +122,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B206F892978673100916906 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2B206F8A2978674600916906 /* CaptureSnippetView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		2B352C8F2967E76F00269F93 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				2B352C902967E78100269F93 /* Data.swift */,
+				2B206F872977808C00916906 /* UIViewControllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -142,6 +163,8 @@
 		2B47505829577F3400B1E61C /* Podkast */ = {
 			isa = PBXGroup;
 			children = (
+				2BA38884297CF952003AE943 /* Libraries */,
+				2B206F892978673100916906 /* Views */,
 				2B352C8F2967E76F00269F93 /* Extensions */,
 				2BA5C5202962472E0089A4BB /* Models */,
 				2BA5C51F296247140089A4BB /* ViewControllers */,
@@ -174,10 +197,27 @@
 			path = PodkastUITests;
 			sourceTree = "<group>";
 		};
+		2BA38884297CF952003AE943 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				2BA38885297CF95C003AE943 /* Fuse */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		2BA38885297CF95C003AE943 /* Fuse */ = {
+			isa = PBXGroup;
+			children = (
+				2BA38887297CF964003AE943 /* Fuse.swift */,
+				2BA38886297CF964003AE943 /* FuseUtilities.swift */,
+				2BA38888297CF964003AE943 /* String+Fuse.swift */,
+			);
+			path = Fuse;
+			sourceTree = "<group>";
+		};
 		2BA5C51F296247140089A4BB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				2BC151FD29626C60008BA93E /* OtherControllers */,
 				2BC151FB29625035008BA93E /* LibraryTableViewController.swift */,
 				2B8DFB57295E20120020B508 /* HomeViewController.swift */,
 				2B47505D29577F3400B1E61C /* LoginViewController.swift */,
@@ -198,16 +238,10 @@
 				2B15F51B29629F70001FB481 /* SnippetTableViewCell.swift */,
 				2BA5C515296008B10089A4BB /* Podcast.swift */,
 				2B352C8D2967E19900269F93 /* SpotifyUser.swift */,
+				2BA3887D297CD778003AE943 /* SnippetController.swift */,
+				2BA3887F297CE0CB003AE943 /* SnippetCell.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		2BC151FD29626C60008BA93E /* OtherControllers */ = {
-			isa = PBXGroup;
-			children = (
-				2BC151FE29626C8C008BA93E /* SnippetsController.swift */,
-			);
-			path = OtherControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,6 +377,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BA5C51E296012DA0089A4BB /* PlaybackTypes.swift in Sources */,
+				2BA3888B297CF964003AE943 /* String+Fuse.swift in Sources */,
+				2BA3888A297CF964003AE943 /* Fuse.swift in Sources */,
+				2BA38889297CF964003AE943 /* FuseUtilities.swift in Sources */,
+				2BA3887E297CD778003AE943 /* SnippetController.swift in Sources */,
 				2B15F51E29635383001FB481 /* EditSnippetTableViewCell.swift in Sources */,
 				2B8DFB58295E20120020B508 /* HomeViewController.swift in Sources */,
 				2BA5C514296007AC0089A4BB /* PodcastSnippet.swift in Sources */,
@@ -353,11 +391,13 @@
 				2BA5C516296008B10089A4BB /* Podcast.swift in Sources */,
 				2B352C8E2967E19900269F93 /* SpotifyUser.swift in Sources */,
 				2BA5C510295FD5620089A4BB /* Errors.swift in Sources */,
+				2B206F8B2978674600916906 /* CaptureSnippetView.swift in Sources */,
 				2BA5C518296009490089A4BB /* Episode.swift in Sources */,
-				2BC151FF29626C8C008BA93E /* SnippetsController.swift in Sources */,
 				2B352C912967E78100269F93 /* Data.swift in Sources */,
 				2B47505C29577F3400B1E61C /* SceneDelegate.swift in Sources */,
 				2BA5C51A29600A7F0089A4BB /* Image.swift in Sources */,
+				2B206F882977808C00916906 /* UIViewControllerExtension.swift in Sources */,
+				2BA38880297CE0CB003AE943 /* SnippetCell.swift in Sources */,
 				2B15F51C29629F70001FB481 /* SnippetTableViewCell.swift in Sources */,
 				2B352C932967EFA400269F93 /* RefreshToken.swift in Sources */,
 			);
