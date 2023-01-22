@@ -43,6 +43,8 @@ class HomeViewController: UIViewController, SPTAppRemotePlayerStateDelegate {
     @IBOutlet var albumImageView: UIImageView!
     @IBOutlet var topAlertLabel: UILabel!
     @IBOutlet var back15Button: UIButton!
+    @IBOutlet var initialInfo: UIStackView!
+    @IBOutlet var nothingPlayingLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -94,7 +96,9 @@ class HomeViewController: UIViewController, SPTAppRemotePlayerStateDelegate {
         if appRemote?.isConnected == false {
             // Call stopPress function because Spotify will make user leave app and CaptureButton will remain in pressed state.
             captureButton.pressStop(handler: nil)
-            appRemote?.authorizeAndPlayURI(playURI)
+            if appRemote?.authorizeAndPlayURI(playURI) == nil {
+                self.showAppStoreInstall()
+            }
         } else {
             guard let isPodcast = playerState?.track.isPodcast,
                   isPodcast else {
@@ -119,7 +123,9 @@ class HomeViewController: UIViewController, SPTAppRemotePlayerStateDelegate {
         if appRemote?.isConnected == false {
             // Call stopPress function because Spotify will make user leave app and CaptureButton will remain in pressed state.
             captureButton.pressStop(handler: nil)
-            appRemote?.authorizeAndPlayURI(playURI)
+            if appRemote?.authorizeAndPlayURI(playURI) == false {
+                showAppStoreInstall()
+            }
         } else {
             guard let isPodcast = playerState?.track.isPodcast,
                   isPodcast else {
@@ -146,7 +152,9 @@ class HomeViewController: UIViewController, SPTAppRemotePlayerStateDelegate {
         if appRemote?.isConnected == false {
             // Call stopPress function because Spotify will make user leave app and CaptureButton will remain in pressed state.
             captureButton.pressStop(handler: nil)
-            appRemote?.authorizeAndPlayURI(playURI)
+            if appRemote?.authorizeAndPlayURI(playURI) == false {
+                showAppStoreInstall()
+            }
         } else {
             appRemote?.playerAPI?.getPlayerState {(result, error) -> Void in
                 guard error == nil else {
@@ -198,7 +206,7 @@ class HomeViewController: UIViewController, SPTAppRemotePlayerStateDelegate {
         }
         
         self.snippet = PodcastSnippet(startTime: startTime, episodeName: track.name, episodeUri: track.uri, episodeDuration: track.duration, episodeArtist: track.artist, podcast: track.album)
-        self.fetchAlbumArtForTrack(track: track, width: 250, height: 250) { (image) -> Void in
+        self.fetchAlbumArtForTrack(track: track, width: 500, height: 500) { (image) -> Void in
             guard let imageData = image.pngData() else {
                 print("Could get image data!")
                 return
@@ -307,6 +315,9 @@ class HomeViewController: UIViewController, SPTAppRemotePlayerStateDelegate {
         print("CHANGED")
         print("CHANGED")
         print("CHANGED")
+        
+        initialInfo.isHidden = true
+        nothingPlayingLabel.isHidden = true
         self.playerState = playerState
         updateViewWithPlayerState(playerState)
     }

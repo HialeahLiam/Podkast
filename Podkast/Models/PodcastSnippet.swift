@@ -22,7 +22,6 @@ class PodcastSnippet: Codable, Fuseable {
     var isNew = true
     dynamic var title: String
     var properties: [FuseProperty] {
-        print("snippet title: ", self.title)
             return [
                 FuseProperty(name: title, weight: 0.7),
                 FuseProperty(name: podcast.name, weight: 0.3),

@@ -100,49 +100,80 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now playing:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y62-Rs-9Ws">
-                                <rect key="frame" x="60" y="89" width="220" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <rect key="frame" x="52" y="89" width="289" height="46.666666666666657"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tcJ-3m-0Of">
-                                <rect key="frame" x="60" y="187" width="273" height="200.33333333333337"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="xzz-pz-pxw">
+                                <rect key="frame" x="20" y="377" width="353" height="98.333333333333314"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play a podcast in your Spotify app and hold down the capture button." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mj5-PD-FM7">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="39.666666666666664"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Head to your library to check out your new snippet!" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xB9-rP-lF0">
+                                        <rect key="frame" x="0.0" y="58.666666666666686" width="353" height="39.666666666666657"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nothing's playing!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ahk-5T-rc7">
+                                <rect key="frame" x="104.33333333333333" y="317" width="184.33333333333337" height="20"/>
+                                <fontDescription key="fontDescription" name="Menlo-Italic" family="Menlo" pointSize="17"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tcJ-3m-0Of">
+                                <rect key="frame" x="16" y="457.00000000000006" width="353" height="300.33333333333343"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IEN-Cn-EsU">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="76.666666666666686" y="0.0" width="200" height="200"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="3ou-SH-tCw"/>
-                                            <constraint firstAttribute="width" constant="100" id="GuY-QB-9gM"/>
+                                            <constraint firstAttribute="height" constant="200" id="3ou-SH-tCw"/>
+                                            <constraint firstAttribute="width" constant="200" id="GuY-QB-9gM"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Episode Title that goes on really long" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVE-gZ-FLd">
-                                        <rect key="frame" x="0.0" y="110" width="250" height="60"/>
+                                        <rect key="frame" x="35.333333333333343" y="210.00000000000003" width="282.66666666666663" height="59.999999999999972"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <color key="textColor" red="0.19666136846261065" green="0.57728658536585364" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="textColor" red="0.39607840779999998" green="0.83137255909999996" blue="0.43137252329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJf-Wt-Tj4">
-                                        <rect key="frame" x="0.0" y="180" width="41.333333333333336" height="20.333333333333343"/>
+                                        <rect key="frame" x="35.333333333333343" y="280" width="282.66666666666663" height="20.333333333333314"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="bJf-Wt-Tj4" firstAttribute="leading" secondItem="gVE-gZ-FLd" secondAttribute="leading" id="7uG-cC-31B"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Iog-rZ-XJU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Ew9-gc-3Le" firstAttribute="leading" secondItem="Iog-rZ-XJU" secondAttribute="leading" constant="20" id="3ei-Zb-miU"/>
+                            <constraint firstItem="Y62-Rs-9Ws" firstAttribute="centerX" secondItem="eA3-7u-BR5" secondAttribute="centerX" id="5we-Ih-kDb"/>
                             <constraint firstItem="Iog-rZ-XJU" firstAttribute="top" secondItem="Y62-Rs-9Ws" secondAttribute="top" constant="-30" id="CZX-zW-Xmz"/>
-                            <constraint firstItem="tcJ-3m-0Of" firstAttribute="leading" secondItem="Iog-rZ-XJU" secondAttribute="leading" constant="60" id="YDZ-4L-8hh"/>
+                            <constraint firstAttribute="trailing" secondItem="xzz-pz-pxw" secondAttribute="trailing" constant="20" id="Kgd-19-1GT"/>
+                            <constraint firstItem="xzz-pz-pxw" firstAttribute="leading" secondItem="eA3-7u-BR5" secondAttribute="leading" constant="20" id="M0X-Y3-dst"/>
+                            <constraint firstItem="tcJ-3m-0Of" firstAttribute="leading" secondItem="Iog-rZ-XJU" secondAttribute="leading" constant="20" id="YDZ-4L-8hh"/>
                             <constraint firstItem="nKl-Vr-2jk" firstAttribute="centerX" secondItem="eA3-7u-BR5" secondAttribute="centerX" id="YQD-0f-obu"/>
                             <constraint firstItem="Iog-rZ-XJU" firstAttribute="trailing" secondItem="Ew9-gc-3Le" secondAttribute="trailing" constant="20" id="Zg3-NN-1rJ"/>
-                            <constraint firstItem="tcJ-3m-0Of" firstAttribute="leading" secondItem="Y62-Rs-9Ws" secondAttribute="leading" id="aSb-Zw-wtu"/>
+                            <constraint firstItem="xzz-pz-pxw" firstAttribute="top" secondItem="Ahk-5T-rc7" secondAttribute="bottom" constant="40" id="fLW-rc-9hW"/>
+                            <constraint firstItem="Ahk-5T-rc7" firstAttribute="centerX" secondItem="eA3-7u-BR5" secondAttribute="centerX" id="hBZ-g4-CJD"/>
                             <constraint firstItem="tcJ-3m-0Of" firstAttribute="top" secondItem="Y62-Rs-9Ws" secondAttribute="bottom" constant="50" id="mQr-YG-1dx"/>
                             <constraint firstItem="Iog-rZ-XJU" firstAttribute="bottom" secondItem="Ew9-gc-3Le" secondAttribute="bottom" constant="60" id="vyR-PP-WiM"/>
                             <constraint firstItem="z8c-t6-E3z" firstAttribute="centerX" secondItem="eA3-7u-BR5" secondAttribute="centerX" id="xNU-Q3-hMu"/>
-                            <constraint firstItem="Iog-rZ-XJU" firstAttribute="trailing" secondItem="tcJ-3m-0Of" secondAttribute="trailing" constant="60" id="yML-rk-Z2j"/>
+                            <constraint firstItem="Iog-rZ-XJU" firstAttribute="trailing" secondItem="tcJ-3m-0Of" secondAttribute="trailing" constant="20" id="yML-rk-Z2j"/>
+                            <constraint firstItem="xzz-pz-pxw" firstAttribute="centerY" secondItem="eA3-7u-BR5" secondAttribute="centerY" id="yV7-5W-zn7"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Capture" image="recordingtape" catalog="system" id="UpL-7P-IdZ">
@@ -153,6 +184,8 @@
                         <outlet property="albumNameLabel" destination="bJf-Wt-Tj4" id="GJ0-T0-ZII"/>
                         <outlet property="back15Button" destination="0rh-22-Tdh" id="ni0-tH-nYk"/>
                         <outlet property="captureAlertLabel" destination="nKl-Vr-2jk" id="ohh-PE-Xfu"/>
+                        <outlet property="initialInfo" destination="xzz-pz-pxw" id="uQR-ro-sfC"/>
+                        <outlet property="nothingPlayingLabel" destination="Ahk-5T-rc7" id="vhm-vu-IXe"/>
                         <outlet property="topAlertLabel" destination="z8c-t6-E3z" id="kzS-Oz-H8X"/>
                         <outlet property="trackNameLabel" destination="gVE-gZ-FLd" id="mgf-Xp-Uhr"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="login" modalPresentationStyle="fullScreen" id="rCa-70-Xcs"/>
@@ -183,7 +216,7 @@
             </objects>
             <point key="canvasLocation" x="2348.8549618320608" y="-2.1126760563380285"/>
         </scene>
-        <!--Snippets Library-->
+        <!--Library Table View Controller-->
         <scene sceneID="HRI-Nq-MR4">
             <objects>
                 <tableViewController id="Fxy-1t-cre" customClass="LibraryTableViewController" customModule="Podkast" customModuleProvider="target" sceneMemberID="viewController">
@@ -298,7 +331,7 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="QSY-XL-PXT">
+                                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="QSY-XL-PXT">
                                                             <rect key="frame" x="0.0" y="11.000000000000002" width="29" height="18.666666666666671"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
@@ -334,7 +367,7 @@
                             <outlet property="delegate" destination="Fxy-1t-cre" id="wWw-hk-SnN"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Snippets Library" id="ChP-bE-K2o"/>
+                    <navigationItem key="navigationItem" style="browser" customizationIdentifier="" id="ChP-bE-K2o"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vab-3W-CSg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -381,6 +414,9 @@
         <image name="recordingtape" catalog="system" width="128" height="60"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

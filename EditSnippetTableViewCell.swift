@@ -49,11 +49,11 @@ class EditSnippetTableViewCell: UITableViewCell, UITextFieldDelegate {
 
         timestampLabel.text = "\(start)-\(end)"
         
-        if let image = image {
-            myImage = image
+        if let imageData = snippet.imageData {
+            myImage.image = UIImage(data: imageData)
         } else {
             myImage.image = UIImage(named: "empty-image")
-        }
+        } 
         
     }
 

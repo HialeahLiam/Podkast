@@ -80,6 +80,7 @@ class CaptureSnippetView: UIView {
         outerCircle.addSubview(innerCircle)
         label.text = "Capture"
         label.font = UIFont(name: "System", size: 10)
+        label.textColor = .white
         // Prevents system from automatically specifying the view's size and position. Basically, allowing constraints to work.
         outerCircle.translatesAutoresizingMaskIntoConstraints = false
         innerCircle.translatesAutoresizingMaskIntoConstraints = false

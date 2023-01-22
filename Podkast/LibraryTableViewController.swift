@@ -22,13 +22,15 @@ class LibraryTableViewController: UITableViewController, UISearchBarDelegate {
     }
     var snippetToBePlayed: PodcastSnippet?
 
+    @IBOutlet var podcastSelectionButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 90
-        print("Library loaded!")
-
+        
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -38,6 +40,30 @@ class LibraryTableViewController: UITableViewController, UISearchBarDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
+        
+        // Podcast filter button - here instead of view did load so it will contain newly recorded podcasts
+        let podcastSelectionButton = UIButton(type: .custom)
+        podcastSelectionButton.configuration = UIButton.Configuration.borderless()
+        podcastSelectionButton.configuration!.baseForegroundColor = .systemRed
+//        podcastSelectionButton.configuration!.baseBackgroundColor = .systemRed
+        
+        let podcastFilterSelectionHandler = {(action: UIAction) in
+            SnippetController.podcastNameFilter = action.title
+            self.tableView.reloadData()
+        }
+        var actions = SnippetController.getPodcasts().map { title in
+            return UIAction(title: title, handler: podcastFilterSelectionHandler)
+        }
+        actions.insert(UIAction(title: SnippetController.DEFAULT_PODCAST_FILTER_TEXT, handler: podcastFilterSelectionHandler), at: 0)
+        podcastSelectionButton.menu = UIMenu(children: actions)
+        
+        podcastSelectionButton.showsMenuAsPrimaryAction = true
+        podcastSelectionButton.changesSelectionAsPrimaryAction = true
+        
+        navigationItem.titleView = podcastSelectionButton
+        // This line let's button expand to its full potential width. I do not know why
+        navigationItem.titleView?.translatesAutoresizingMaskIntoConstraints = false
+
     }
     
     @IBAction func finishEditTouchUp() { finishSnippetEdit() }
@@ -51,6 +77,7 @@ class LibraryTableViewController: UITableViewController, UISearchBarDelegate {
         cell.titleField.becomeFirstResponder()
     }
 
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -111,7 +138,6 @@ class LibraryTableViewController: UITableViewController, UISearchBarDelegate {
 
             // Configure the cell...
             let snippet = SnippetController.getAt(index: indexPath.row)
-            print("snippet", snippet.isNew)
             
             fetchAlbumArtForSnippet(snippet: snippet, width: 64, height: 64) { image in
                 print("fetch")
@@ -155,7 +181,10 @@ class LibraryTableViewController: UITableViewController, UISearchBarDelegate {
         if appRemote?.isConnected == false {
             // We keep the selected snippet in order to play it as soon as we return to our app.
             self.snippetToBePlayed = snippet
-            appRemote?.authorizeAndPlayURI(playURI)
+            if appRemote?.authorizeAndPlayURI(playURI) == false {
+                showAppStoreInstall()
+                return
+            }
             print("NOW AUTHORIZED")
         } else {
             appRemote?.playerAPI?.play(snippet.episodeUri, asRadio: false, callback: { reslt, error in

@@ -46,15 +46,11 @@ class SnippetTableViewCell: SnippetCell {
             myImage.image = UIImage(named: "empty-image")
         }
         
-        print("snippet: ", snippet.title, snippet.isNew, "is hidden: ", isNewLabel.isHidden)
         if !snippet.isNew {
             isNewLabel.isHidden = true
         } else {
             isNewLabel.isHidden = false
         }
-        print("is hidden: ", isNewLabel.isHidden)
-        print("\n--------\n")
-        
     }
 
 }

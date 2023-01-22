@@ -9,6 +9,8 @@ import Foundation
 
 class SnippetController {
     
+    static let DEFAULT_PODCAST_FILTER_TEXT = "All shows"
+    
     static private var snippets: [PodcastSnippet] = {
         guard let snippetData = try? Data(contentsOf: dataUrl),
            let snippets = try? PropertyListDecoder().decode([PodcastSnippet].self, from: snippetData) else {
@@ -19,17 +21,19 @@ class SnippetController {
          return snippets
     }()
     static var filterText = ""
+    static var podcastNameFilter = DEFAULT_PODCAST_FILTER_TEXT
     static private var filteredSnippets: [PodcastSnippet] {
-        if filterText.isEmpty {return self.snippets}
+        print("podcast filter name: ", podcastNameFilter)
+        let filteredByPodcast = self.podcastNameFilter != DEFAULT_PODCAST_FILTER_TEXT ? self.snippets.filter { snippet in
+            snippet.podcast.name == self.podcastNameFilter
+        } : self.snippets
         
-        let results = self.fuse.search(self.filterText, in: self.snippets)
-        print("RESULTS: ", results)
-        results.forEach { item in
-            print("snippet: ", snippets[item.index].title, "-", snippets[item.index].podcast.name)
-            print("score: ", item.score)
-        }
+        print(self.podcastNameFilter)
+        
+        if filterText.isEmpty {return filteredByPodcast}
+        let results = self.fuse.search(self.filterText, in: filteredByPodcast)
         return results.map { item in
-            self.snippets[item.index]
+            filteredByPodcast[item.index]
         }
     }
     static let fuse = Fuse(threshold: 1)
@@ -40,6 +44,14 @@ class SnippetController {
         }
     }
    
+    static func getPodcasts() -> Set<String> {
+        var podcasts = Set<String>()
+        self.snippets.forEach { snippet in
+            podcasts.insert(snippet.podcast.name)
+        }
+        
+        return podcasts
+    }
     static func getAll() -> [PodcastSnippet] {
         return snippets
     }
