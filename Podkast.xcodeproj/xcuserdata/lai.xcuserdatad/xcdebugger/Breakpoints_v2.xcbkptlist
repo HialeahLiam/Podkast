@@ -16,8 +16,70 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "438"
             endingLineNumber = "438"
-            landmarkName = "playBackSnippet(_:deviceId:)"
-            landmarkType = "7">
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "1B9338B5-5A95-459A-80FE-63E2B1E83AC7 - 4c1e9f69aa06074e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for static Podkast.Spotify.playBackSnippet(_: Podkast.PodcastSnippet, deviceId: Swift.Optional&lt;Swift.String&gt;) async throws -&gt; Swift.Int"
+                  moduleName = "Podkast"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lai/dev/liam/Podkast/Podkast/Models/Spotify.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "438"
+                  endingLineNumber = "438"
+                  offsetFromSymbolStart = "2056">
+               </Location>
+               <Location
+                  uuid = "1B9338B5-5A95-459A-80FE-63E2B1E83AC7 - a09e4c8619572346"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(5) await resume partial function for static Podkast.Spotify.playBackSnippet(_: Podkast.PodcastSnippet, deviceId: Swift.Optional&lt;Swift.String&gt;) async throws -&gt; Swift.Int"
+                  moduleName = "Podkast"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lai/dev/liam/Podkast/Podkast/Models/Spotify.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "438"
+                  endingLineNumber = "438"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "1B9338B5-5A95-459A-80FE-63E2B1E83AC7 - bc4488153a0dcb48"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(6) suspend resume partial function for static Podkast.Spotify.playBackSnippet(_: Podkast.PodcastSnippet, deviceId: Swift.Optional&lt;Swift.String&gt;) async throws -&gt; Swift.Int"
+                  moduleName = "Podkast"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lai/dev/liam/Podkast/Podkast/Models/Spotify.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "438"
+                  endingLineNumber = "438"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "1B9338B5-5A95-459A-80FE-63E2B1E83AC7 - e459fd98f208714b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(7) suspend resume partial function for static Podkast.Spotify.playBackSnippet(_: Podkast.PodcastSnippet, deviceId: Swift.Optional&lt;Swift.String&gt;) async throws -&gt; Swift.Int"
+                  moduleName = "Podkast"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lai/dev/liam/Podkast/Podkast/Models/Spotify.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "438"
+                  endingLineNumber = "438"
+                  offsetFromSymbolStart = "72">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -32,8 +94,55 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "262"
             endingLineNumber = "262"
-            landmarkName = "startPlayback(snippet:position:deviceId:)"
-            landmarkType = "7">
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "559AFF45-8636-4076-8C31-CAE437445F8B - 67e68b68bf9f55f4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for static Podkast.Spotify.startPlayback(snippet: Podkast.PodcastSnippet, position: Swift.Int, deviceId: Swift.Optional&lt;Swift.String&gt;) async throws -&gt; ()"
+                  moduleName = "Podkast"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lai/dev/liam/Podkast/Podkast/Models/Spotify.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "262"
+                  endingLineNumber = "262"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  uuid = "559AFF45-8636-4076-8C31-CAE437445F8B - 21ba5fd32d66571b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for static Podkast.Spotify.startPlayback(snippet: Podkast.PodcastSnippet, position: Swift.Int, deviceId: Swift.Optional&lt;Swift.String&gt;) async throws -&gt; ()"
+                  moduleName = "Podkast"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lai/dev/liam/Podkast/Podkast/Models/Spotify.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "262"
+                  endingLineNumber = "262"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "559AFF45-8636-4076-8C31-CAE437445F8B - a70b8c4d96599f6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for static Podkast.Spotify.startPlayback(snippet: Podkast.PodcastSnippet, position: Swift.Int, deviceId: Swift.Optional&lt;Swift.String&gt;) async throws -&gt; ()"
+                  moduleName = "Podkast"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lai/dev/liam/Podkast/Podkast/Models/Spotify.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "262"
+                  endingLineNumber = "262"
+                  offsetFromSymbolStart = "284">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -48,8 +157,55 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "347"
             endingLineNumber = "347"
-            landmarkName = "getUserDevice()"
-            landmarkType = "7">
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "A8004B78-D33C-4093-88A9-A9CD7AA2EF21 - cc3e780082b82cd1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for static Podkast.Spotify.getUserDevice() async throws -&gt; Podkast.Spotify.Device"
+                  moduleName = "Podkast"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lai/dev/liam/Podkast/Podkast/Models/Spotify.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "347"
+                  endingLineNumber = "347"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  uuid = "A8004B78-D33C-4093-88A9-A9CD7AA2EF21 - 6e3a2e837f7d2cfe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for static Podkast.Spotify.getUserDevice() async throws -&gt; Podkast.Spotify.Device"
+                  moduleName = "Podkast"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lai/dev/liam/Podkast/Podkast/Models/Spotify.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "347"
+                  endingLineNumber = "347"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "A8004B78-D33C-4093-88A9-A9CD7AA2EF21 - 79f2b70bec47e8d3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for static Podkast.Spotify.getUserDevice() async throws -&gt; Podkast.Spotify.Device"
+                  moduleName = "Podkast"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lai/dev/liam/Podkast/Podkast/Models/Spotify.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "347"
+                  endingLineNumber = "347"
+                  offsetFromSymbolStart = "104">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

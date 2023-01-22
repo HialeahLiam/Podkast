@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SnippetTableViewCell: UITableViewCell {
+class SnippetTableViewCell: SnippetCell {
     
     @IBOutlet var myImage: UIImageView!
     
@@ -17,17 +17,7 @@ class SnippetTableViewCell: UITableViewCell {
     
     @IBOutlet var timestampLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
+    @IBOutlet var isNewLabel: UILabel!
     
     func update(with snippet: PodcastSnippet) {
     
@@ -47,7 +37,23 @@ class SnippetTableViewCell: UITableViewCell {
         let end = PodcastSnippet.convertToMinandSec(timeInSeconds: startTime + Int(duration))
 
         timestampLabel.text = "\(start)-\(end)"
-        myImage.image = snippet.episode.image
+
+        
+        
+        if let imageData = snippet.imageData {
+            myImage.image = UIImage(data: imageData)
+        } else {
+            myImage.image = UIImage(named: "empty-image")
+        }
+        
+        print("snippet: ", snippet.title, snippet.isNew, "is hidden: ", isNewLabel.isHidden)
+        if !snippet.isNew {
+            isNewLabel.isHidden = true
+        } else {
+            isNewLabel.isHidden = false
+        }
+        print("is hidden: ", isNewLabel.isHidden)
+        print("\n--------\n")
         
     }
 
