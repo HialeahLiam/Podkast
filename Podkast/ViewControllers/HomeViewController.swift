@@ -9,6 +9,7 @@ import UIKit
 
 class HomeViewController: UIViewController, SPTAppRemotePlayerStateDelegate {
     
+    
     // in seconds
     var dateOnTapDown: Double?
     var snippet: PodcastSnippet?
@@ -37,17 +38,30 @@ class HomeViewController: UIViewController, SPTAppRemotePlayerStateDelegate {
     var alertDisplayedConstraint: NSLayoutConstraint!
     var timestampTimer = Timer()
     
+    
+    @IBOutlet var playbackControls: UIStackView!
+    @IBOutlet var trackCard: UIStackView!
     @IBOutlet var trackNameLabel: UILabel!
     @IBOutlet var albumNameLabel: UILabel!
     @IBOutlet var captureAlertLabel: UILabel!
     @IBOutlet var albumImageView: UIImageView!
     @IBOutlet var topAlertLabel: UILabel!
     @IBOutlet var back15Button: UIButton!
-    @IBOutlet var initialInfo: UIStackView!
+//    @IBOutlet var initialInfo: UIStackView!
     @IBOutlet var nothingPlayingLabel: UILabel!
+    @IBOutlet var connectSpotifyButton: UIButton!
+    @IBOutlet var nowPlayingLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        initialInfo.isHidden = true
+        connectSpotifyButton.isHidden = true
+        
+        nothingPlayingLabel.isHidden = true
+        nowPlayingLabel.isHidden = true
+        
+        trackCard.isHidden = true
         
         captureButton = CaptureSnippetView(frame: CGRect())
         captureButton.pressDownHandler = {
@@ -59,9 +73,10 @@ class HomeViewController: UIViewController, SPTAppRemotePlayerStateDelegate {
         captureButton.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(captureButton)
         
+        captureButton.isHidden = true
         captureButton.widthAnchor.constraint(equalToConstant: 150).isActive = true
         captureButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        captureButton.centerYAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -90).isActive = true
+        captureButton.bottomAnchor.constraint(equalTo: self.playbackControls.topAnchor, constant: -10).isActive = true
         
         captureButton.center = self.view.center
         
@@ -77,6 +92,9 @@ class HomeViewController: UIViewController, SPTAppRemotePlayerStateDelegate {
         trackNameLabel.isHidden = true
         albumNameLabel.isHidden = true
         
+        trackCard.layer.cornerRadius = 10
+        
+        playbackControls.layer.cornerRadius = 20
     }
     override func viewDidAppear(_ animated: Bool) {
         print("APPEAR")
@@ -88,8 +106,19 @@ class HomeViewController: UIViewController, SPTAppRemotePlayerStateDelegate {
             self.playerState = playerState
             self.updateViewWithPlayerState(playerState)
         }
+        
+        if appRemote?.isConnected == false {
+            connectSpotifyButton.isHidden = false
+            
+        }
+        
     }
     
+    @IBAction func connectToSpotify(_ sender: Any) {
+        if appRemote?.authorizeAndPlayURI(playURI) == false {
+            showAppStoreInstall()
+        }
+    }
     @IBAction func unwindToHome(unwindSegue: UIStoryboardSegue) {}
     
     @IBAction func back15Pressed(_ sender: Any) {
@@ -137,7 +166,7 @@ class HomeViewController: UIViewController, SPTAppRemotePlayerStateDelegate {
                 
                 return
             }
-            appRemote?.playerAPI?.seekBackward15Seconds() {(result, error) -> Void in
+            appRemote?.playerAPI?.seekForward15Seconds() {(result, error) -> Void in
                 guard error == nil else {
                     print("Error seeking forward 15 seconds: ", error!)
                     return
@@ -300,6 +329,7 @@ class HomeViewController: UIViewController, SPTAppRemotePlayerStateDelegate {
     func updateViewWithPlayerState(_ playerState: SPTAppRemotePlayerState) {
         var initialPosition = playerState.playbackPosition
         
+        
         fetchAlbumArtForTrack(track: playerState.track, width: 250, height: 250) { image in
             self.albumImageView.image = image
             // Placing everything in closure because I don't want image to render after everything else has rendered.
@@ -308,18 +338,29 @@ class HomeViewController: UIViewController, SPTAppRemotePlayerStateDelegate {
             
             self.trackNameLabel.text = playerState.track.name
             self.albumNameLabel.text = playerState.track.album.name
+            
+            self.nowPlayingLabel.isHidden = false
         }
     }
     
     func playerStateDidChange(_ playerState: SPTAppRemotePlayerState) {
         print("CHANGED")
         print("CHANGED")
-        print("CHANGED")
         
-        initialInfo.isHidden = true
-        nothingPlayingLabel.isHidden = true
+        
+//        initialInfo.isHidden = true
         self.playerState = playerState
         updateViewWithPlayerState(playerState)
+    }
+    
+    func spotifyConnected() {
+        
+        connectSpotifyButton.isHidden = true
+        self.captureButton.isHidden=false
+        trackCard.isHidden = false
+    }
+    
+    func spotifyDisconnected(){
     }
     /*
     // MARK: - Navigation

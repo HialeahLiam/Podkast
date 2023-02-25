@@ -13,17 +13,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, SPTAppRemoteDelegate {
     func appRemoteDidEstablishConnection(_ appRemote: SPTAppRemote) {
         print("app remote established connection")
         currentViewController?.appRemoteConnected()
+        self.homeViewController?.spotifyConnected()
 //        currentController?.appRemoteConnected()
     }
     
     func appRemote(_ appRemote: SPTAppRemote, didDisconnectWithError error: Error?) {
         print("disconnected")
+        self.homeViewController?.spotifyDisconnected()
+        
 //        playerViewController?.appRemoteDisconnect()
     }
     
     func appRemote(_ appRemote: SPTAppRemote, didFailConnectionAttemptWithError error: Error?) {
         print("failed app remote connection: ", error)
-//        playerViewController?.appRemoteDisconnect()
+
     }
 
     var window: UIWindow?
@@ -160,6 +163,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, SPTAppRemoteDelegate {
            return nil
        }
    }
+    
+    var homeViewController: HomeViewController? {
+        get {
+            guard let rootController = self.window?.rootViewController as? UITabBarController else { return nil }
+            
+            let currentController = rootController.selectedViewController
+            if let homeController = currentController as? HomeViewController { return homeController }
+            return nil
+        }
+    }
     
     func changeRootViewController(_ viewController: UIViewController) {
         

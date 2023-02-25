@@ -126,6 +126,7 @@ class LibraryTableViewController: UITableViewController, UISearchBarDelegate {
             let button = UIButton()
             button.setImage(UIImage(systemName: "checkmark"), for: .normal)
             button.tag = indexPath.row
+            button.tintColor = .red
             button.addTarget(self, action: #selector(self.finishEditTouchUp), for: .touchUpInside)
             button.sizeToFit()
             
@@ -150,6 +151,7 @@ class LibraryTableViewController: UITableViewController, UISearchBarDelegate {
             let button = UIButton()
             button.setImage(UIImage(systemName: "pencil"), for: .normal)
             button.tag = indexPath.row
+            button.tintColor = .red
             button.addTarget(self, action: #selector(self.editSnippet), for: .touchUpInside)
             button.sizeToFit()
 
