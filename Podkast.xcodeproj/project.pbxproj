@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		2B15F51C29629F70001FB481 /* SnippetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B15F51B29629F70001FB481 /* SnippetTableViewCell.swift */; };
 		2B15F51E29635383001FB481 /* EditSnippetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B15F51D29635383001FB481 /* EditSnippetTableViewCell.swift */; };
-		2B206F7F2975210200916906 /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B206F7E2975210200916906 /* SpotifyiOS.framework */; };
 		2B206F882977808C00916906 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B206F872977808C00916906 /* UIViewControllerExtension.swift */; };
 		2B206F8B2978674600916906 /* CaptureSnippetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B206F8A2978674600916906 /* CaptureSnippetView.swift */; };
+		2B23E8E029AADDE2008CBAFB /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B206F7E2975210200916906 /* SpotifyiOS.framework */; };
 		2B352C8E2967E19900269F93 /* SpotifyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B352C8D2967E19900269F93 /* SpotifyUser.swift */; };
 		2B352C912967E78100269F93 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B352C902967E78100269F93 /* Data.swift */; };
 		2B352C932967EFA400269F93 /* RefreshToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B352C922967EFA400269F93 /* RefreshToken.swift */; };
@@ -101,7 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B206F7F2975210200916906 /* SpotifyiOS.framework in Frameworks */,
+				2B23E8E029AADDE2008CBAFB /* SpotifyiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -585,11 +585,13 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Podkast/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Podkast;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -622,11 +624,13 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Podkast/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Podkast;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -38,7 +38,7 @@ class HomeViewController: UIViewController, SPTAppRemotePlayerStateDelegate {
     var alertDisplayedConstraint: NSLayoutConstraint!
     var timestampTimer = Timer()
     
-    
+    @IBOutlet var recordPodcastLabel: UILabel!
     @IBOutlet var playbackControls: UIStackView!
     @IBOutlet var trackCard: UIStackView!
     @IBOutlet var trackNameLabel: UILabel!
@@ -80,8 +80,10 @@ class HomeViewController: UIViewController, SPTAppRemotePlayerStateDelegate {
         
         captureButton.center = self.view.center
         
-        captureAlertLabel.bottomAnchor.constraint(equalTo: captureButton.topAnchor, constant: -30).isActive = true
+        captureAlertLabel.bottomAnchor.constraint(equalTo: captureButton.topAnchor, constant: -10).isActive = true
         captureAlertLabel.isHidden = true
+        recordPodcastLabel.bottomAnchor.constraint(equalTo: captureButton.topAnchor, constant: -10).isActive = true
+        recordPodcastLabel.isHidden = true
         
         alertHiddenConstraint = topAlertLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: -200)
         alertDisplayedConstraint = topAlertLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 5)
@@ -95,6 +97,7 @@ class HomeViewController: UIViewController, SPTAppRemotePlayerStateDelegate {
         trackCard.layer.cornerRadius = 10
         
         playbackControls.layer.cornerRadius = 20
+        playbackControls.isHidden = true
     }
     override func viewDidAppear(_ animated: Bool) {
         print("APPEAR")
@@ -223,6 +226,7 @@ class HomeViewController: UIViewController, SPTAppRemotePlayerStateDelegate {
     func beginCapture(_ playerState: SPTAppRemotePlayerState) {
         let track = playerState.track
         self.captureAlertLabel.isHidden = false
+        self.recordPodcastLabel.isHidden = true
 
         self.dateOnTapDown = Date.now.timeIntervalSince1970
         let toleranceInMS = Int(self.START_TOLERANCE * 1000)
@@ -262,6 +266,7 @@ class HomeViewController: UIViewController, SPTAppRemotePlayerStateDelegate {
     func captureStop() {
         print("CAPTURE STOP")
         captureAlertLabel.isHidden = true
+        recordPodcastLabel.isHidden = false
         
         addSnippetToLibrary()
     }
@@ -357,6 +362,8 @@ class HomeViewController: UIViewController, SPTAppRemotePlayerStateDelegate {
         
         connectSpotifyButton.isHidden = true
         self.captureButton.isHidden=false
+        playbackControls.isHidden = false
+        recordPodcastLabel.isHidden = false
         trackCard.isHidden = false
     }
     
